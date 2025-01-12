@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocimiento Facial</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Reconocimiento Facial</h1>
+    </header>
+
+    <main class="main-content">
+        <!-- Sección de subir imagen -->
+        <section class="upload-section">
+            <h2>Subir Imagen</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="image" name="image" accept="image/*" class="file-input">
+                <button type="submit" class="btn">Subir Imagen</button>
+            </form>
+        </section>
+
+        <!-- Sección de imagen original -->
+        <section class="image-section">
+            <h2>Imagen Original</h2>
+            <div class="image-container">
+                <img id="originalImage" src="" alt="Imagen Original">
+            </div>
+        </section>
+
+        <!-- Sección de historial de imágenes -->
+        <section class="image-history-section">
+            <h2>Historial de Imágenes</h2>
+            <div id="historicoImages" class="image-gallery"></div>
+        </section>
+
+        <!-- Sección de imágenes procesadas -->
+        <section class="processed-images-section">
+            <h2>Imágenes Procesadas</h2>
+            <div id="processedImages" class="image-gallery"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Reconocimiento Facial | Diseñado para facilitar la interacción con imágenes.</p>
+    </footer>
+
+    <!-- Enlace al archivo JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
