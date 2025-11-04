@@ -1,166 +1,149 @@
-/* Estilos generales */
+/* === Estilos generales === */
 body {
-    background-color: #1e1e1e;
-    color: white;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f6fa;
+    color: #333;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
 }
 
-/* Contenedor principal */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Encabezado */
 .header {
-    width: 100%;
-    background-color: #2e2e2e;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-.header h1 {
-    color: #9b4dff;
-    font-size: 2.5em;
-    text-shadow: 0 0 15px #9b4dff, 0 0 25px #9b4dff;
-}
-
-/* Contenido principal */
-.main-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    width: 100%;
-    padding: 20px;
-}
-
-/* Sección de subir imagen */
-.upload-section {
-    flex: 1 1 calc(33.333% - 20px); /* Toma un tercio del ancho */
-    background-color: #2e2e2e;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 15px #9b4dff;
-}
-
-.upload-section h2 {
-    color: #9b4dff;
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-.file-input {
-    margin-bottom: 10px;
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #9b4dff;
-    border-radius: 5px;
-    background-color: #1e1e1e;
+    background-color: #4e73df;
     color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
 }
 
+.main-content {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* === Botón principal === */
 .btn {
-    width: 100%;
-    background-color: #9b4dff;
+    background-color: #1cc88a;
+    color: white;
+    padding: 10px 20px;
     border: none;
-    padding: 10px;
-    font-size: 1em;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 5px;
-    text-shadow: 0 0 10px #ff00ff;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #7a3aee;
+    background-color: #17a673;
+    transform: scale(1.05);
 }
 
-/* Sección de imagen original */
-.image-section {
-    flex: 1 1 calc(33.333% - 20px);
-    background-color: #2e2e2e;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 15px #9b4dff;
-}
-
-.image-section .image-container img {
-    width: 100%;
-    border: 5px solid #9b4dff;
-    box-shadow: 0 0 15px #9b4dff;
-    border-radius: 10px;
-}
-
-/* Historial de imágenes */
-.image-history-section {
-    flex: 1 1 calc(33.333% - 20px);
-    background-color: #2e2e2e;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 15px #9b4dff;
-}
-
-.image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.image-gallery img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 2px solid #9b4dff;
-    box-shadow: 0 0 10px #9b4dff;
-    cursor: pointer;
-}
-
-.image-gallery img:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
-/* Procesamiento de imágenes */
-.processed-images-section {
-    flex: 1 1 100%;
-    background-color: #2e2e2e;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 15px #9b4dff;
-    margin-top: 20px;
-}
-
-.processed-images-section h2 {
-    color: #9b4dff;
-    font-size: 1.5em;
-}
-
-/* Pie de página */
-.footer {
-    margin-top: 20px;
-    background-color: #2e2e2e;
+/* === Input de archivo === */
+.file-input {
+    display: block;
+    margin: 15px auto;
+    border: 2px dashed #4e73df;
     padding: 10px;
-    text-align: center;
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
 }
 
-.footer p {
-    margin: 0;
+/* === Imagen original === */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* === Galería del historial === */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* === Tarjeta individual === */
+.image-item {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.image-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* === Imagen dentro del historial === */
+.image-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+/* === Botón circular de eliminar === */
+.delete-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255, 77, 77, 0.9);
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(255, 0, 0, 0.3);
+}
+
+.delete-btn:hover {
+    background: #e60000;
+    transform: scale(1.1);
+}
+
+.delete-btn:active {
+    transform: scale(0.95);
+}
+
+/* Animación de eliminación */
+.image-item.fade-out {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* === Footer === */
+.footer {
+    background-color: #4e73df;
     color: white;
-    font-size: 1em;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    margin-top: 30px;
 }
